@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="image-section">
+        <div class="logo">
+          <img src="images/logo.png" alt="brandLogo" />
+        </div>
+      </section>
+      <section class="sign-up">
+        <h2>Sign Up For Our Service!</h2>
+        <form action="#" method="get">
+          <div class="input-data">
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name" id="first_name" required />
+          </div>
+          <div class="input-data">
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" id="last_name" required />
+          </div>
+          <div class="input-data">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+          <div class="input-data">
+            <label for="phone_number">Phone number</label>
+            <input type="tel" name="phone_number" id="phone_number" required />
+          </div>
+          <div class="input-data">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required />
+          </div>
+          <div class="input-data">
+            <label for="confirm_password">Password</label>
+            <input
+              type="password"
+              name="confirm_password"
+              id="confirm_password"
+              required
+            />
+          </div>
+          <div class="create-btn">
+            <button type="submit">Create Account</button>
+          </div>
+        </form>
+        <div class="login-link">
+          <p>Already have an account? <a href="#">Login</a> here!</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

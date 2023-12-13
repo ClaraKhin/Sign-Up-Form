@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+}
+
+.container .image-section {
+  background: url("images/Christmas.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.container .image-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(1.5px);
+  z-index: -1;
+}
+.container .image-section .logo {
+  background: rgba(0, 0, 0, 0.649);
+  overflow: hidden;
+  z-index: -1;
+  text-align: center;
+  height: 30%;
+  padding: 0px;
+  position: absolute;
+  top: 35%;
+  width: 100%;
+}
+.container .image-section .logo img::after {
+  position: absolute;
+  z-index: 1;
+  content: "";
+}
+.container .image-section .logo img {
+  width: 200px;
+}
+.sign-up {
+  padding: 30px;
+  background-color: #fad29d75;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.sign-up::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.5;
+}
+.sign-up h2 {
+  text-align: center;
+  margin: 8px;
+  font-weight: SemiBold 600;
+  color: #e6cece;
+}
+.sign-up form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px;
+  border-bottom: 1px solid #fff;
+  padding: 20px;
+}
+.sign-up form .input-data {
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+}
+.sign-up form .input-data label {
+  color: #e6cece;
+}
+.sign-up form .input-data input {
+  width: 80%;
+  border: none;
+  background: none;
+  padding: 10px;
+  border-bottom: 1px solid #fff;
+}
+
+.sign-up form .create-btn {
+  margin: 20px 10px;
+}
+.sign-up form .create-btn button {
+  padding: 10px;
+  background: #000000;
+  border: none;
+  color: #e6cece;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.sign-up .login-link {
+  text-align: center;
+}
+.sign-up .login-link p {
+  padding: 20px;
+  color: #e6cece;
+}
+.sign-up .login-link p a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 19px;
+  font-style: italic;
+}
+@media screen and (max-width: 350px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .sign-up h2 {
+    margin-top: 20px;
+  }
+  .container .image-section {
+    display: none;
+  }
+  .sign-up {
+    padding: 0px;
+    background: url(images/Christmas.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  .sign-up::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.4;
+  }
+  .sign-up form {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .sign-up form .input-data input {
+    width: 100%;
+    background: #e6cece95;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    margin-top: 5px;
+  }
+  .sign-up .login-link p {
+    padding: 0px;
+    margin: 18px;
+    color: #e6cece;
+  }
+}
